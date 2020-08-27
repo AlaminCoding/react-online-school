@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Header from "./components/header";
+import coursedata from "./coursedata";
+import Course from "./components/course";
 
 function App() {
+  const [courseData, setCourseData] = useState(coursedata);
+  const [course, setCourse] = useState([]);
+  // Add Course Handeling
+  const addCourseHandler = (enrolledCourse) => {
+    const newCourse = [...course, enrolledCourse];
+    setCourse(newCourse);
+  };
+  //Delete Course Handeling
+  const deleteCourseHandle = (deletedCourse) => {
+    let newCourse = course.filter((data) => data !== deletedCourse);
+    setCourse(newCourse);
+    console.log("Triggerd");
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header count={course.length} />
+      <Course
+        courseData={courseData}
+        course={course}
+        addCourseHandler={addCourseHandler}
+        deleteCourseHandle={deleteCourseHandle}
+      />
+    </React.Fragment>
   );
 }
 

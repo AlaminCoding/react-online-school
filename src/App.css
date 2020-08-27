@@ -1,38 +1,117 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap");
+body {
+  font-family: "Kanit", sans-serif;
+}
+header {
+  border-bottom: 1px solid black;
+  background-color: white;
+}
+/*Logo*/
+.logo {
+  width: 100px;
+}
+/*Navbar*/
+.nav-link {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+/*Course Section*/
+.course-section {
+  margin-top: 80px;
+}
+/*Course Box*/
+.course-box {
+  border: 1px solid black;
+  margin: 15px 0px;
+  padding: 10px;
+}
+.course-box img {
+  width: 100%;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+}
+.course-box h2 {
+  font-size: 21px;
+  margin: 10px 0px;
+}
+.mentor {
+  margin: 0;
+}
+.price {
+  font-weight: 600;
+  font-size: 21px;
+}
+.course-box .btn {
+  border: 1px solid crimson;
+  border-radius: 0;
+  text-transform: uppercase;
+  padding: 4px 18px;
+  font-weight: 600;
+  color: white;
+  background-color: crimson;
+  transition: all 0.4s;
+}
+.course-box .btn:hover {
+  color: crimson;
+  background-color: white;
+}
+/*Price-Box*/
+.price-box {
+  margin-top: 15px;
+  width: 100%;
+  border: 1px solid black;
+  height: auto;
+  padding: 10px;
+}
+.price-box table {
+  width: 100%;
+  border: 1px solid rgb(0, 0, 0, 0.5);
+}
+.price-box table thead {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.price-box table tbody th:nth-child(even) {
+  text-align: right;
+}
+.price-box table th {
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  padding: 10px;
+}
+/*All Course col*/
+.all-course-col {
+  height: 90vh;
+  overflow: scroll;
+}
+/*Enroll Courses Column*/
+.enroll-courses-col {
+  height: 90vh;
+  overflow: scroll;
+}
+.enroll-course-box {
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid black;
+}
+.enroll-box {
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  margin: 10px 10px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.enroll-box img {
+  width: 100px;
+  height: auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.enroll-box h2 {
+  margin: 0;
+  font-size: 14px;
 }
-
-.App-link {
-  color: #61dafb;
+.delete-icon {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  font-size: 20px;
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-icon:hover {
+  color: crimson;
 }
